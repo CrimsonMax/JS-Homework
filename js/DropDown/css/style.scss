@@ -1,0 +1,38 @@
+body {
+    background-color: orange;
+}
+
+.user-item {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.item-left {
+    width: 200px;
+}
+
+.user-company {
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+ul {
+    list-style-type: none;
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.myList {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.inFocus {
+    border-width: thick;
+    background-color: rgb(180, 216, 156);
+}
