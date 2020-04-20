@@ -8,32 +8,28 @@
 Также сообщать пользователю о невозможности деления на ноль, 
 если он ввел 0 в качестве делителя.*/
 
-let num1 = 2; // вводится пользователем
-let num2 = 5; // вводится пользователем
-let oper = "/"; // вводится пользователем
+let num1;
+let num2;
+let oper;
 
-if (oper === "+") {
-    console.log (num1, oper, num2, "=", num1 + num2);
-} else {
-    if (oper === "-") {
-        console.log (num1, oper, num2, "=", num1 - num2);
+do {
+    num1 = prompt("Input first number", 0);
+    oper = prompt("Input operation", '"+, -, *, /" or 0 for Exit');
+    num2 = prompt("Input second number", 0);
+
+    if (oper === "+") {
+        alert(num1 + oper + num2 + "=" + (+num1 + +num2));
+    } else if (oper === "-") {
+        alert(num1 + oper + num2 + "=" + (+num1 - +num2));
+    } else if (oper === "*") {
+        alert(num1 + oper + num2 + "=" + (+num1 * +num2));
+    } else if (oper === "/" && num2 > 0) {
+        alert(num1 + oper + num2 + "=" + (+num1 / +num2));
+    } else if (oper === "/" && +num2 === 0) {
+        alert("No division by 0!");
+    } else if (oper === "0") {
+        alert("End application");
     } else {
-        if (oper === "*") {
-            console.log (num1, oper, num2, "=", num1 * num2);
-        } else {
-            if (oper === "/" && num2 > 0) {
-                console.log (num1, oper, num2, "=", num1 / num2);
-            } else {
-                if (oper === "/" && num2 === 0) {
-                    console.log ("No division by 0!");
-                } else {
-                    if (oper === "0") {
-                        console.log ("End application");
-                    } else {
-                        console.log ("Error");
-                    }
-                }
-            }
-        }
+        alert("Error");
     }
-}
+} while (oper != "0");

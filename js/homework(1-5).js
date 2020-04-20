@@ -9,5 +9,5 @@ console.log (a1, ":", a2);
 if (a1 % a2 == 0) {
         console.log ("Valid!", (a1 / a2));
 } else {
-        console.log ("Not valid.", "remainder- ", (a1 % a2));
+        console.log ("Not valid.", Math.floor(a1 / a2), "remainder- ", (a1 % a2));
 }
