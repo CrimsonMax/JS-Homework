@@ -36,6 +36,3 @@ function deepEqual(obj1, obj2) {
 let obj1 = 'bob';
 let obj2 = 'bob1';
 console.log (deepEqual(obj1, obj2));
-
-// Тут тоже нагуглил код.
-// Но в итоге вроде всё понятно.
